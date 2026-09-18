@@ -1,6 +1,5 @@
-overrides:
-  "@cloudflare/workerd-windows-64": "file:vendor/workerd-windows-64-1.20260515.1.tgz"
 allowBuilds:
-  esbuild: true
   sharp: true
-  workerd: true
+onlyBuiltDependencies:
+  - sharp
+
