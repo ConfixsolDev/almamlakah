@@ -88,10 +88,10 @@ h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 .journey-copy em svg { width: 14px; height: 14px; }
 .journey-modal { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; padding: 28px; background: rgba(1,6,8,.82); backdrop-filter: blur(8px); }
 .journey-modal-panel { position: relative; display: grid; grid-template-columns: 1.25fr .75fr; width: min(1080px, 100%); max-height: min(720px, calc(100vh - 56px)); overflow: auto; border: 1px solid rgba(235,192,102,.62); background: #091618; box-shadow: 0 24px 80px rgba(0,0,0,.55); }
-.journey-modal-image { min-height: 520px; background-image: url('/journey-grid.png'); background-size: 200% 200%; background-repeat: no-repeat; }
-.journey-modal-image.journey-a { background-image: url('/bhagnari-breed-premium.png'); background-size: cover; background-position: center; }
-.journey-modal-image.journey-b { background-image: url('/responsible-raising-premium.png'); background-size: cover; background-position: center; }
-.journey-modal-image.journey-e { background-image: url('/gcc-corridor.png'); background-size: cover; background-position: 72% center; }
+.journey-modal-image { min-height: 520px; background-image: url('/journey-grid.png'); background-position: center; background-size: cover !important; background-repeat: no-repeat !important; }
+.journey-modal-image.journey-a { background-image: url('/bhagnari-breed-premium.png'); }
+.journey-modal-image.journey-b { background-image: url('/responsible-raising-premium.png'); }
+.journey-modal-image.journey-e { background-image: url('/gcc-corridor.png'); background-position: 72% center; }
 .journey-modal-copy { display: flex; flex-direction: column; justify-content: center; padding: 54px 42px; }
 .journey-modal-copy h2 { margin-bottom: 22px; font-size: clamp(2.3rem, 4vw, 4rem); }
 .journey-modal-copy p:not(.section-label) { margin: 0 0 18px; color: #c8cbc5; font-size: 1rem; line-height: 1.7; }
@@ -287,3 +287,4 @@ h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
   .journey-modal-image { min-height: 250px; max-height: 38vh; }
   .journey-modal-copy { padding: 30px 24px 34px; }
 }
+
