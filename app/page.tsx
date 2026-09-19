@@ -14,6 +14,7 @@ import {
   UsersRound,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
+import Image from 'next/image';
 import { JourneyGallery } from './journey-gallery';
 
 const navItems = [
@@ -30,37 +31,38 @@ const journey = [
     number: '01',
     title: 'Breed selection',
     text: 'Bhagnari and selected Pakistani cattle chosen for strength, yield, and consistent quality.',
-    className: 'journey-a',
+    image: '/bhagnari-breed-premium.png',
   },
   {
     number: '02',
     title: 'Responsible raising',
     text: 'Livestock raised in carefully managed environments with attention to feed and wellbeing.',
-    className: 'journey-b',
+    image: '/responsible-raising-premium.png',
   },
   {
     number: '03',
     title: 'Precision processing',
     text: 'Halal processing, hygienic handling, and disciplined controls at every stage.',
-    className: 'journey-c',
+    image: '/journey-processing.png',
   },
   {
     number: '04',
     title: 'Cold-chain export',
     text: 'Temperature-managed storage and transport designed to protect freshness in transit.',
-    className: 'journey-d',
+    image: '/journey-cold-chain.png',
   },
   {
     number: '05',
     title: 'GCC distribution',
     text: 'A focused supply corridor connecting Pakistan with importers across GCC markets.',
-    className: 'journey-e',
+    image: '/gcc-corridor.png',
+    imagePosition: '72% center',
   },
   {
     number: '06',
     title: 'Fine dining destination',
     text: 'Premium cuts prepared for restaurants, hotels, retailers, and food-service partners.',
-    className: 'journey-f',
+    image: '/journey-fine-dining.png',
   },
 ];
 
@@ -68,17 +70,17 @@ const products = [
   {
     title: 'Bhagnari Beef',
     text: 'A distinguished Pakistani breed selected for bold flavour and premium culinary performance.',
-    className: 'product-a',
+    image: '/product-ribeye.png',
   },
   {
     title: 'Premium Lamb',
     text: 'Tender, versatile cuts prepared for hospitality, retail, and specialist food service.',
-    className: 'product-b',
+    image: '/product-lamb.png',
   },
   {
     title: 'Chef-Ready Cuts',
     text: 'Consistent specifications and practical formats for professional kitchens and buyers.',
-    className: 'product-c',
+    image: '/product-chef-cuts.png',
   },
 ];
 
@@ -94,7 +96,7 @@ function BrandLockup({ footer = false }: { footer?: boolean }) {
   return (
     <div className="brand-lockup">
       <a className="brand-logo" href="#home" aria-label="almamlakah LLC home">
-        <img src="/almamlakah-mark.svg" alt="" />
+        <Image src="/almamlakah-mark.svg" alt="" width={42} height={42} />
         <span className="brand-name brand-primary">almamlakah <small>LLC</small></span>
       </a>
       {footer && <>
@@ -113,6 +115,14 @@ export default function Home() {
   return (
     <main>
       <section className="hero" id="home">
+        <Image
+          className="hero-media"
+          src="/hero-bhagnari.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+        />
         <header className="site-header shell">
           <BrandLockup />
           <nav className="desktop-nav" aria-label="Primary navigation">
@@ -171,7 +181,7 @@ export default function Home() {
           <div className="product-grid">
             {products.map((product) => (
               <article className="product-card" key={product.title}>
-                <div className={`product-visual ${product.className}`} aria-hidden="true" />
+                <Image className="product-visual" src={product.image} alt="" width={640} height={821} sizes="(max-width: 680px) 100vw, (max-width: 1120px) 33vw, 24vw" />
                 <div className="product-copy">
                   <div>
                     <h3>{product.title}</h3>
@@ -186,6 +196,7 @@ export default function Home() {
       </section>
 
       <section className="corridor-section" id="export-journey">
+        <Image className="corridor-media" src="/gcc-corridor.png" alt="" fill sizes="100vw" />
         <div className="shell corridor-content">
           <div className="corridor-copy">
             <p className="section-label">A focused trade corridor</p>
@@ -220,6 +231,7 @@ export default function Home() {
       </section>
 
       <section className="cta-section" id="contact">
+        <Image className="cta-media" src="/journey-fine-dining.png" alt="" fill sizes="100vw" />
         <div className="shell cta-content">
           <p className="section-label">Partnerships built for growth</p>
           <h2>Exceptional meat.<br />Stronger food businesses.</h2>

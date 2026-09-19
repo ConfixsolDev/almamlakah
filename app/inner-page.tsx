@@ -1,5 +1,6 @@
 import { ArrowRight, CheckCircle2, ChevronRight, Snowflake, ShieldCheck, Ship } from 'lucide-react';
 import type { ReactNode } from 'react';
+import Image from 'next/image';
 
 type PageProps = {
   eyebrow: string;
@@ -13,13 +14,14 @@ export function InnerPage({ eyebrow, title, intro, image, children }: PageProps)
   return (
     <main className="inner-page">
       <header className="inner-header shell">
-        <a className="brand-logo" href="/" aria-label="almamlakah LLC home"><img src="/almamlakah-mark.svg" alt="" /><span className="brand-name brand-primary">almamlakah <small>LLC</small></span></a>
+        <a className="brand-logo" href="/" aria-label="almamlakah LLC home"><Image src="/almamlakah-mark.svg" alt="" width={42} height={42} /><span className="brand-name brand-primary">almamlakah <small>LLC</small></span></a>
         <nav aria-label="Primary navigation">
           <a href="/story">Our Story</a><a href="/breeds">Breeds</a><a href="/process">Process</a><a href="/products">Products</a><a href="/export-journey">Export Journey</a><a href="/quality">Quality</a>
         </nav>
         <a className="gold-button" href="/#contact">Partner with us <ArrowRight /></a>
       </header>
-      <section className="inner-hero" style={{ backgroundImage: `linear-gradient(90deg, rgba(3,10,12,.94), rgba(3,10,12,.56) 48%, rgba(3,10,12,.16)), url(${image})` }}>
+      <section className="inner-hero">
+        <Image className="inner-hero-media" src={image} alt="" fill priority sizes="100vw" />
         <div className="shell inner-hero-copy"><p className="section-label">{eyebrow}</p><h1>{title}</h1><p>{intro}</p></div>
       </section>
       <div className="shell inner-content">{children}</div>
@@ -60,5 +62,6 @@ export function ProcessSteps() {
 }
 
 export function CutGrid() {
-  return <div className="cut-grid">{cutTypes.map(([number, name, text]) => <article className="cut-card" key={number}><div className={`cut-card-image cut-image-${Number(number) % 3}`} aria-hidden="true" /><div className="cut-card-content"><span>{number}</span><h3>{name}</h3><p>{text}</p><ChevronRight /></div></article>)}</div>;
+  const cutImages = ['/product-ribeye.png', '/product-lamb.png', '/product-chef-cuts.png'];
+  return <div className="cut-grid">{cutTypes.map(([number, name, text], index) => <article className="cut-card" key={number}><Image className="cut-card-image" src={cutImages[index % cutImages.length]} alt="" width={640} height={821} sizes="(max-width: 680px) 50vw, 33vw" /><div className="cut-card-content"><span>{number}</span><h3>{name}</h3><p>{text}</p><ChevronRight /></div></article>)}</div>;
 }
