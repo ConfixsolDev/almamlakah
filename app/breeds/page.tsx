@@ -33,14 +33,14 @@ const breedProfiles = [
     text: 'An active, hardy breed with a strong frame and a long-standing place in Punjab’s livestock tradition.',
   },
   {
-    name: 'Beetal',
-    type: 'Goat · Punjab',
-    text: 'A large-framed Pakistani goat breed valued for meat quality, versatility, and suitability for premium mutton selections.',
+    name: 'Kajli',
+    type: 'Sheep · Punjab',
+    text: 'A large-framed Pakistani sheep breed recognised for its distinctive markings, growth potential, and suitability for premium lamb and mutton programmes.',
   },
   {
-    name: 'Kamori',
-    type: 'Goat · Sindh',
-    text: 'A distinctive heritage breed recognised for its rich colouring, elegant profile, and premium position in Pakistan’s goat sector.',
+    name: 'Lohi',
+    type: 'Sheep · Punjab',
+    text: 'A well-known long-eared sheep breed valued for adaptability, meat production, and dependable performance under local conditions.',
   },
 ];
 
@@ -111,7 +111,7 @@ export default function BreedsPage() {
           <p className="section-label">The foundation</p>
           <h2>Breed selection<br />with a purpose</h2>
         </div>
-        <p>Carefully selected Pakistani cattle, sheep, and goat breeds form the foundation of our premium beef and mutton range. Only animals meeting defined health, welfare, conformation, traceability, and programme requirements progress through the selection journey.</p>
+        <p>Carefully selected Pakistani cattle and sheep breeds form the foundation of our premium beef, lamb, and mutton range. Only animals meeting defined health, welfare, conformation, traceability, and programme requirements progress through the selection journey.</p>
       </section>
 
       <div className="breed-feature">

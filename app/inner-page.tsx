@@ -68,7 +68,7 @@ const cutGroups = [
     id: 'mutton',
     eyebrow: 'Mutton & lamb',
     title: 'Traditional favourites. Professional formats.',
-    text: 'Sheep and goat products can be prepared as whole joints, bone-in cuts, boneless muscles, portions, cubes, or mince.',
+    text: 'Premium sheep products can be prepared as whole joints, bone-in cuts, boneless muscles, portions, cubes, or mince.',
     image: '/cuts-premium-mutton.webp',
     imageAlt: 'Professional assortment of premium raw mutton and lamb cuts',
     cuts: [
