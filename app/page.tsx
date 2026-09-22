@@ -71,7 +71,7 @@ const products = [
   {
     title: 'Bhagnari Beef',
     text: 'A distinguished Pakistani breed selected for bold flavour and premium culinary performance.',
-    image: '/product-authentic-beef-v2.webp',
+    image: '/real-beef-cutting-board.jpg',
   },
   {
     title: 'Premium Lamb',
@@ -116,14 +116,12 @@ export default function Home() {
   return (
     <main>
       <section className="hero" id="home">
-        <Image
-          className="hero-media"
-          src="/hero-authentic-meat.webp"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-        />
+        <div className="hero-origin-media" aria-hidden="true">
+          <Image className="hero-media" src="/hero-cattle-origin.png" alt="" fill priority sizes="100vw" />
+        </div>
+        <div className="hero-beef-media" aria-hidden="true">
+          <Image src="/real-beef-bone-in.jpg" alt="" fill priority sizes="(max-width: 680px) 100vw, 34vw" />
+        </div>
         <header className="site-header shell">
           <BrandLockup />
           <nav className="desktop-nav" aria-label="Primary navigation">
@@ -259,6 +257,7 @@ export default function Home() {
         </div>
         <div className="shell footer-bottom">
           <span>© {year} Al-Mamlakah W.L.L. · Fauji Meat partnership</span>
+          <a className="image-credit" href="https://www.magnific.com" target="_blank" rel="noreferrer">Photography: Designed by Magnific</a>
           <span><CheckCircle2 /> Halal integrity · responsible sourcing · cold-chain discipline</span>
         </div>
       </footer>

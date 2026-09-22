@@ -27,7 +27,7 @@ export function InnerPage({ eyebrow, title, intro, image, children }: PageProps)
       </section>
       <div className="shell inner-content">{children}</div>
       <section className="inner-cta"><div className="shell"><p className="section-label">Built around your market</p><h2>Premium cuts. Reliable supply.<br />Made for your business.</h2><p className="inner-cta-copy">Tell us the cuts, volumes, packaging, and delivery requirements you need. We align responsible sourcing, halal processing, quality control, and cold-chain delivery from Pakistan to the GCC.</p><a className="gold-button" href={whatsappUrl} target="_blank" rel="noreferrer">Plan your meat programme <ArrowRight /></a></div></section>
-      <footer className="inner-footer"><div className="shell"><span>© {new Date().getFullYear()} Al-Mamlakah W.L.L.</span><a href="https://faujimeat.com" target="_blank" rel="noreferrer">Fauji Meat <ArrowRight /></a><span>Pakistan · GCC markets</span></div></footer>
+      <footer className="inner-footer"><div className="shell"><span>© {new Date().getFullYear()} Al-Mamlakah W.L.L.</span><a href="https://faujimeat.com" target="_blank" rel="noreferrer">Fauji Meat <ArrowRight /></a><a className="image-credit" href="https://www.magnific.com" target="_blank" rel="noreferrer">Photography: Designed by Magnific</a><span>Pakistan · GCC markets</span></div></footer>
     </main>
   );
 }
@@ -42,8 +42,8 @@ const cutGroups = [
     eyebrow: 'Premium beef',
     title: 'From signature steaks to slow-cook favourites',
     text: 'Bone-in, boneless, primal, sub-primal, portion-controlled, and kitchen-ready formats prepared to specification.',
-    image: '/authentic-beef-cuts.webp',
-    imageAlt: 'Professional assortment of premium raw beef cuts',
+    image: '/real-beef-bone-in.jpg',
+    imageAlt: 'Fresh bone-in raw beef cut photographed on a preparation board',
     cuts: [
       ['Tenderloin', 'Centre-cut, whole, or portioned for premium dining.'],
       ['Striploin', 'Clean steaks and roasting portions with a refined fat edge.'],
