@@ -25,7 +25,7 @@ export function InnerPage({ eyebrow, title, intro, image, children }: PageProps)
         <div className="shell inner-hero-copy"><p className="section-label">{eyebrow}</p><h1>{title}</h1><p>{intro}</p></div>
       </section>
       <div className="shell inner-content">{children}</div>
-      <section className="inner-cta"><div className="shell"><p className="section-label">Ready for the next shipment?</p><h2>Build a dependable meat programme.</h2><a className="gold-button" href="/#contact">Start a partnership <ArrowRight /></a></div></section>
+      <section className="inner-cta"><div className="shell"><p className="section-label">Built around your market</p><h2>Premium cuts. Reliable supply.<br />Made for your business.</h2><p className="inner-cta-copy">Tell us the cuts, volumes, packaging, and delivery requirements you need. We align responsible sourcing, halal processing, quality control, and cold-chain delivery from Pakistan to the GCC.</p><a className="gold-button" href="/#contact">Plan your meat programme <ArrowRight /></a></div></section>
       <footer className="inner-footer"><div className="shell"><span>© {new Date().getFullYear()} almamlakah LLC</span><a href="https://faujimeat.com" target="_blank" rel="noreferrer">Fauji Meat <ArrowRight /></a><span>Pakistan · GCC markets</span></div></footer>
     </main>
   );

@@ -187,7 +187,8 @@ h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 .detail-callout h2 { margin-bottom: 14px; }
 .detail-callout p { max-width: 570px; }
 .inner-cta { padding: 80px 0; border-top: 1px solid rgba(218,174,83,.3); background: radial-gradient(circle at 80% 30%, rgba(191,133,37,.16), transparent 34%), #0a1719; }
-.inner-cta h2 { margin-bottom: 24px; }
+.inner-cta h2 { margin-bottom: 16px; }
+.inner-cta-copy { max-width: 720px; margin: 0 0 28px; color: #bbc0ba; font-size: 1rem; line-height: 1.65; }
 .inner-footer { border-top: 1px solid rgba(218,174,83,.25); padding: 23px 0; color: #979f9a; font-size: .8rem; }
 .inner-footer .shell { display: flex; justify-content: space-between; gap: 20px; }
 .inner-footer a { display: inline-flex; align-items: center; gap: 8px; color: #e5bd64; text-transform: uppercase; letter-spacing: .08em; }
