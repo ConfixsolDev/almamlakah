@@ -31,7 +31,7 @@ const journey = [
     number: '01',
     title: 'Breed selection',
     text: 'Bhagnari and selected Pakistani cattle chosen for strength, yield, and consistent quality.',
-    image: '/bhagnari-breed-premium.png',
+    image: '/multi-breed-premium.png',
   },
   {
     number: '02',
@@ -117,7 +117,7 @@ export default function Home() {
       <section className="hero" id="home">
         <Image
           className="hero-media"
-          src="/hero-bhagnari.png"
+          src="/hero-multi-breed-premium.png"
           alt=""
           fill
           priority
