@@ -14,7 +14,7 @@ export function InnerPage({ eyebrow, title, intro, image, children }: PageProps)
   return (
     <main className="inner-page">
       <header className="inner-header shell">
-        <a className="brand-logo" href="/" aria-label="almamlakah LLC home"><Image src="/almamlakah-mark.svg" alt="" width={42} height={42} /><span className="brand-name brand-primary">almamlakah <small>LLC</small></span></a>
+        <a className="brand-logo" href="/" aria-label="Al-Mamlakah W.L.L. home"><Image className="official-brand-mark" src="/almamlakah-official-mark.svg" alt="" width={72} height={43} /><span className="brand-name brand-primary">Al-Mamlakah <small>W.L.L.</small></span></a>
         <nav aria-label="Primary navigation">
           <a href="/story">Our Story</a><a href="/breeds">Breeds</a><a href="/process">Process</a><a href="/products">Products</a><a href="/export-journey">Export Journey</a><a href="/quality">Quality</a>
         </nav>
@@ -26,7 +26,7 @@ export function InnerPage({ eyebrow, title, intro, image, children }: PageProps)
       </section>
       <div className="shell inner-content">{children}</div>
       <section className="inner-cta"><div className="shell"><p className="section-label">Built around your market</p><h2>Premium cuts. Reliable supply.<br />Made for your business.</h2><p className="inner-cta-copy">Tell us the cuts, volumes, packaging, and delivery requirements you need. We align responsible sourcing, halal processing, quality control, and cold-chain delivery from Pakistan to the GCC.</p><a className="gold-button" href="/#contact">Plan your meat programme <ArrowRight /></a></div></section>
-      <footer className="inner-footer"><div className="shell"><span>© {new Date().getFullYear()} almamlakah LLC</span><a href="https://faujimeat.com" target="_blank" rel="noreferrer">Fauji Meat <ArrowRight /></a><span>Pakistan · GCC markets</span></div></footer>
+      <footer className="inner-footer"><div className="shell"><span>© {new Date().getFullYear()} Al-Mamlakah W.L.L.</span><a href="https://faujimeat.com" target="_blank" rel="noreferrer">Fauji Meat <ArrowRight /></a><span>Pakistan · GCC markets</span></div></footer>
     </main>
   );
 }

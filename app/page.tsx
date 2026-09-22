@@ -95,9 +95,9 @@ const standards: Array<[LucideIcon, string, string]> = [
 function BrandLockup({ footer = false }: { footer?: boolean }) {
   return (
     <div className="brand-lockup">
-      <a className="brand-logo" href="#home" aria-label="almamlakah LLC home">
-        <Image src="/almamlakah-mark.svg" alt="" width={42} height={42} />
-        <span className="brand-name brand-primary">almamlakah <small>LLC</small></span>
+      <a className="brand-logo" href="#home" aria-label="Al-Mamlakah W.L.L. home">
+        <Image className="official-brand-mark" src="/almamlakah-official-mark.svg" alt="" width={72} height={43} />
+        <span className="brand-name brand-primary">Al-Mamlakah <small>W.L.L.</small></span>
       </a>
       {footer && <>
         <span className="brand-divider" />
@@ -257,7 +257,7 @@ export default function Home() {
           </div>
         </div>
         <div className="shell footer-bottom">
-          <span>© {year} almamlakah LLC · Fauji Meat partnership</span>
+          <span>© {year} Al-Mamlakah W.L.L. · Fauji Meat partnership</span>
           <span><CheckCircle2 /> Halal integrity · responsible sourcing · cold-chain discipline</span>
         </div>
       </footer>

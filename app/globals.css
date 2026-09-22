@@ -36,9 +36,9 @@ svg { width: 1.05rem; height: 1.05rem; }
 .site-header { height: 104px; display: grid; grid-template-columns: auto 1fr auto; gap: 34px; align-items: center; border-bottom: 1px solid rgba(255,255,255,.13); }
 .brand-lockup { display: flex; align-items: center; gap: 16px; }
 .brand-logo { display: inline-flex; align-items: center; gap: 10px; }
-.brand-logo img { width: 42px; height: 42px; filter: drop-shadow(0 3px 10px rgba(224,176,75,.2)); }
+.brand-logo img.official-brand-mark { width: 72px; height: 43px; padding: 4px 7px; border: 1px solid rgba(218,174,83,.5); border-radius: 4px; background: #f4efe5; object-fit: contain; filter: drop-shadow(0 3px 10px rgba(224,176,75,.2)); }
 .brand-divider { width: 1px; height: 48px; background: rgba(217,174,87,.45); }
-.brand-name { font-family: Georgia, serif; font-size: 1.12rem; line-height: 1.02; letter-spacing: .02em; text-transform: lowercase; }
+.brand-name { font-family: Georgia, serif; font-size: 1.12rem; line-height: 1.02; letter-spacing: .02em; }
 .brand-name small { margin-left: 5px; font-family: Arial, sans-serif; font-size: .58rem; letter-spacing: .15em; color: #d1d0ca; text-transform: uppercase; }
 .brand-primary { color: #f0cc74; }
 .footer-fauji-link { display: inline-flex; align-items: center; gap: 9px; color: #f1d28b; font: .78rem Arial, sans-serif; letter-spacing: .1em; text-transform: uppercase; }
