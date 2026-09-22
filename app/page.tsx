@@ -135,10 +135,10 @@ export default function Home() {
         </nav>
 
         <div className="hero-content shell">
-          <p className="eyebrow">Pure origins. Premium standards. A better tomorrow.</p>
-          <h1>From Pakistan&apos;s finest<br />breeds to exceptional<br />tables</h1>
-          <p className="hero-kicker">Two powerhouses. One vision.</p>
-          <p className="hero-subtitle">Premium halal meat for GCC markets</p>
+          <p className="eyebrow">Premium Pakistani meat. Crafted for the Gulf.</p>
+          <h1>Pakistan&apos;s finest<br />breeds. Prepared for<br />Gulf tables.</h1>
+          <p className="hero-kicker">Shared values. One trusted partnership.</p>
+          <p className="hero-subtitle">Halal integrity from origin to table</p>
           <div className="hero-actions">
             <a className="gold-button" href="#journey">Explore the journey <ArrowRight /></a>
             <a className="outline-button" href="#contact">Request partnership</a>
@@ -158,7 +158,7 @@ export default function Home() {
           <div className="section-intro split-intro">
             <div>
               <p className="section-label">The journey</p>
-              <h2>A remarkable journey<br />from farm to fine dining</h2>
+              <h2>From Pakistan&apos;s farms<br />to Gulf tables</h2>
             </div>
             <div className="intro-copy">
               <p>A focused partnership, a shared commitment. From carefully selected Pakistani livestock to dining tables across the GCC, we bring together responsible sourcing, disciplined processing, and dependable export logistics.</p>
@@ -174,7 +174,7 @@ export default function Home() {
         <div className="shell products-layout">
           <div className="products-copy" id="breeds">
             <p className="section-label">Our premium range</p>
-            <h2>Pakistan&apos;s finest.<br />Expertly prepared.</h2>
+            <h2>Pakistani origin.<br />Crafted for Gulf kitchens.</h2>
             <p>Premium halal meat selected for consistency, flavour, tenderness, and the demands of GCC hospitality and retail partners.</p>
             <a className="outline-rect" href="#contact">Discuss your requirements <ArrowRight /></a>
           </div>
@@ -214,7 +214,7 @@ export default function Home() {
           <div className="quality-heading">
             <div>
               <p className="section-label">Our commitment</p>
-              <h2>Trust in every detail</h2>
+              <h2>Halal integrity.<br />Quality without compromise.</h2>
             </div>
             <p>Quality is not a final inspection. It is a chain of deliberate choices—from livestock selection and halal handling to cold storage, documentation, and delivery.</p>
           </div>
@@ -234,7 +234,7 @@ export default function Home() {
         <Image className="cta-media" src="/journey-fine-dining.png" alt="" fill sizes="100vw" />
         <div className="shell cta-content">
           <p className="section-label">Partnerships built for growth</p>
-          <h2>Exceptional meat.<br />Stronger food businesses.</h2>
+          <h2>Premium Pakistani meat.<br />Built for Gulf business.</h2>
           <p>Tell us about your market, product specifications, volumes, and delivery needs. We&apos;ll shape the right Pakistan-to-GCC supply conversation.</p>
           <a className="gold-button" href="mailto:partnerships@example.com">Start a partnership <ArrowRight /></a>
         </div>
@@ -244,8 +244,8 @@ export default function Home() {
         <div className="shell footer-main">
           <BrandLockup footer />
           <div className="footer-statement">
-            <strong>Two powerhouses, one vision</strong>
-            <span>Premium halal meat for GCC markets</span>
+            <strong>Pakistani origin. Crafted for the Gulf.</strong>
+            <span>Premium halal meat with quality in every detail</span>
           </div>
           <nav aria-label="Footer navigation">
             {navItems.map(([label, href]) => <a key={href} href={href}>{label}</a>)}
