@@ -47,8 +47,8 @@ const journey = [
   },
   {
     number: '04',
-    title: 'Cold-chain export',
-    text: 'Temperature-managed storage and transport designed to protect freshness in transit.',
+    title: 'The export journey',
+    text: 'Quality preserved. Confidence delivered.',
     image: '/journey-cold-chain.png',
   },
   {
