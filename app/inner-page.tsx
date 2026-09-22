@@ -42,7 +42,7 @@ const cutGroups = [
     eyebrow: 'Premium beef',
     title: 'From signature steaks to slow-cook favourites',
     text: 'Bone-in, boneless, primal, sub-primal, portion-controlled, and kitchen-ready formats prepared to specification.',
-    image: '/cuts-premium-beef.webp',
+    image: '/authentic-beef-cuts.webp',
     imageAlt: 'Professional assortment of premium raw beef cuts',
     cuts: [
       ['Tenderloin', 'Centre-cut, whole, or portioned for premium dining.'],
@@ -70,7 +70,7 @@ const cutGroups = [
     eyebrow: 'Mutton & lamb',
     title: 'Traditional favourites. Professional formats.',
     text: 'Premium sheep products can be prepared as whole joints, bone-in cuts, boneless muscles, portions, cubes, or mince.',
-    image: '/cuts-premium-mutton.webp',
+    image: '/authentic-mutton-cuts.webp',
     imageAlt: 'Professional assortment of premium raw mutton and lamb cuts',
     cuts: [
       ['Whole leg', 'Bone-in centrepiece for roasting and traditional menus.'],

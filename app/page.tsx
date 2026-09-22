@@ -71,12 +71,12 @@ const products = [
   {
     title: 'Bhagnari Beef',
     text: 'A distinguished Pakistani breed selected for bold flavour and premium culinary performance.',
-    image: '/product-ribeye.png',
+    image: '/product-authentic-beef-v2.webp',
   },
   {
     title: 'Premium Lamb',
     text: 'Tender, versatile cuts prepared for hospitality, retail, and specialist food service.',
-    image: '/product-lamb.png',
+    image: '/product-authentic-mutton.webp',
   },
   {
     title: 'Chef-Ready Cuts',
@@ -118,7 +118,7 @@ export default function Home() {
       <section className="hero" id="home">
         <Image
           className="hero-media"
-          src="/hero-multi-breed-premium.png"
+          src="/hero-authentic-meat.webp"
           alt=""
           fill
           priority
