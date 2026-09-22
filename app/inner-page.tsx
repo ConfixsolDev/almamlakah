@@ -35,33 +35,107 @@ export function ProcessPill({ icon, title, text }: { icon: ReactNode; title: str
   return <article className="process-pill"><div className="process-pill-icon">{icon}</div><div><h3>{title}</h3><p>{text}</p></div></article>;
 }
 
-export const cutTypes = [
-  ['01', 'Tenderloin', 'Centre-cut medallions for premium dining.'],
-  ['02', 'Striploin', 'Clean, even steaks with a refined fat edge.'],
-  ['03', 'Ribeye', 'Marbled, full-flavour steaks for grill menus.'],
-  ['04', 'Top Sirloin', 'Lean, versatile portions for consistent service.'],
-  ['05', 'Rump Steak', 'Robust flavour and excellent portion control.'],
-  ['06', 'T-Bone', 'Bone-in presentation cut for signature plates.'],
-  ['07', 'Tomahawk', 'Long-bone showpiece for sharing menus.'],
-  ['08', 'Short Ribs', 'Slow-cook ready with generous meat coverage.'],
-  ['09', 'Brisket', 'Structured for low-and-slow barbecue applications.'],
-  ['10', 'Chuck Roll', 'Reliable texture for roasts and premium mince.'],
-  ['11', 'Topside', 'Lean roasting cut with clean slicing performance.'],
-  ['12', 'Silverside', 'Uniform, trim-ready muscle for catering.'],
-  ['13', 'Knuckle', 'Practical, low-waste cut for portioned dishes.'],
-  ['14', 'Oxtail', 'Rich, collagen-led cut for slow braises.'],
-  ['15', 'Mutton Chops', 'Bone-in chops with a tender, meaty finish.'],
-  ['16', 'Mutton Leg', 'Whole or portioned for roasts and curries.'],
-  ['17', 'Mutton Shoulder', 'Layered flavour for slow cooking and sharing.'],
-  ['18', 'Mutton Loin', 'Elegant portions for plated dining.'],
-  ['19', 'Mutton Diced', 'Kitchen-ready cubes for controlled recipes.'],
+const cutGroups = [
+  {
+    id: 'beef',
+    eyebrow: 'Premium beef',
+    title: 'From signature steaks to slow-cook favourites',
+    text: 'Bone-in, boneless, primal, sub-primal, portion-controlled, and kitchen-ready formats prepared to specification.',
+    image: '/cuts-premium-beef.webp',
+    imageAlt: 'Professional assortment of premium raw beef cuts',
+    cuts: [
+      ['Tenderloin', 'Centre-cut, whole, or portioned for premium dining.'],
+      ['Striploin', 'Clean steaks and roasting portions with a refined fat edge.'],
+      ['Ribeye', 'Marbled steaks, whole ribeye rolls, and grill-ready portions.'],
+      ['Top sirloin', 'Lean, versatile steaks with dependable portion control.'],
+      ['Rump', 'Robust flavour for steaks, roasts, and catering portions.'],
+      ['T-bone & porterhouse', 'Bone-in presentation cuts for signature menus.'],
+      ['Tomahawk', 'Long-bone centrepiece cuts for premium sharing occasions.'],
+      ['Short ribs', 'Meat-rich ribs prepared for braising and barbecue.'],
+      ['Brisket', 'Whole or divided for low-and-slow applications.'],
+      ['Chuck roll', 'Versatile muscle for roasts, steaks, and premium mince.'],
+      ['Topside', 'Lean roasting cut with clean slicing performance.'],
+      ['Silverside', 'Uniform, trim-ready muscle for roasting and catering.'],
+      ['Knuckle', 'Lean, practical cut for steaks, roasting, and portioning.'],
+      ['Shank', 'Collagen-rich bone-in or boneless slow-cook cut.'],
+      ['Flank', 'Full-flavoured flat cut for grilling and slicing.'],
+      ['Skirt', 'Loose-grained cut suited to fast cooking and marinades.'],
+      ['Oxtail', 'Rich, segmented cut for broths and slow braises.'],
+      ['Diced & minced beef', 'Kitchen-ready formats produced to agreed fat ratios.'],
+    ],
+  },
+  {
+    id: 'mutton',
+    eyebrow: 'Mutton & lamb',
+    title: 'Traditional favourites. Professional formats.',
+    text: 'Sheep and goat products can be prepared as whole joints, bone-in cuts, boneless muscles, portions, cubes, or mince.',
+    image: '/cuts-premium-mutton.webp',
+    imageAlt: 'Professional assortment of premium raw mutton and lamb cuts',
+    cuts: [
+      ['Whole leg', 'Bone-in centrepiece for roasting and traditional menus.'],
+      ['Boneless leg', 'Rolled, netted, or divided into controlled muscles.'],
+      ['Shoulder', 'Whole, boned, or portioned for slow cooking.'],
+      ['Rack', 'French-trimmed or standard presentation for premium dining.'],
+      ['Loin', 'Whole loin, saddle, or refined boneless portions.'],
+      ['Chops', 'Evenly cut loin or rib chops to target thickness.'],
+      ['Neck', 'Bone-in rounds or boneless meat for rich slow-cooked dishes.'],
+      ['Breast', 'Economical, flavourful cut for rolling and slow cooking.'],
+      ['Ribs', 'Single, sheet, or portioned ribs for grills and braises.'],
+      ['Shank', 'Front or hind shanks for premium slow-cook service.'],
+      ['Diced mutton', 'Consistent cubes for curries, stews, and production kitchens.'],
+      ['Mutton mince', 'Prepared to the required grind and fat specification.'],
+    ],
+  },
+  {
+    id: 'offal',
+    eyebrow: 'Offal & variety meats',
+    title: 'Carefully cleaned. Precisely prepared.',
+    text: 'Selected edible offal and secondary products are hygienically prepared, chilled, and packed according to destination requirements.',
+    image: '/cuts-premium-offal.webp',
+    imageAlt: 'Clean professional presentation of edible offal and variety meats',
+    cuts: [
+      ['Liver', 'Trimmed whole or sliced to buyer specification.'],
+      ['Heart', 'Cleaned, trimmed, and packed whole or portioned.'],
+      ['Kidneys', 'Carefully cleaned and supplied whole or prepared.'],
+      ['Tongue', 'Trimmed whole tongue for slow cooking and specialist menus.'],
+      ['Tripe', 'Thoroughly cleaned and prepared to market requirements.'],
+      ['Cheek', 'Rich, tender slow-cook meat with strong culinary value.'],
+      ['Marrow bones', 'Cross-cut or canoe-cut for stocks and premium service.'],
+      ['Tail', 'Portioned for broths, stews, and slow-braised dishes.'],
+    ],
+  },
 ];
+
+const carcassFormats = ['Whole carcass', 'Half carcass', 'Forequarter', 'Hindquarter', 'Primal cuts', 'Sub-primal cuts', 'Bone-in or boneless', 'Portion-controlled'];
+
+const supplyFormats = ['Fresh chilled', 'Frozen', 'Vacuum packed', 'Food-service cartons', 'Retail-ready packs', 'Custom weights', 'Private-label ready', 'Export documented'];
 
 export function ProcessSteps() {
   return <div className="process-steps"><ProcessPill icon={<CheckCircle2 />} title="Debone & trim" text="Skilled butchery follows the agreed specification, removing bone, excess fat, silverskin, and uneven edges while protecting yield." /><ProcessPill icon={<Snowflake />} title="Chill & protect" text="Product moves quickly into controlled cooling so the cold chain begins at the cutting table, not at the loading bay." /><ProcessPill icon={<ShieldCheck />} title="Inspect & pack" text="Weights, trim, appearance, seal integrity, labelling, and lot traceability are checked before release." /><ProcessPill icon={<Ship />} title="Export to spec" text="Cartons are palletised, documented, and handed to temperature-managed freight under shipment SOPs." /></div>;
 }
 
 export function CutGrid() {
-  const cutImages = ['/product-ribeye.png', '/product-lamb.png', '/product-chef-cuts.png'];
-  return <div className="cut-grid">{cutTypes.map(([number, name, text], index) => <article className="cut-card" key={number}><Image className="cut-card-image" src={cutImages[index % cutImages.length]} alt="" width={640} height={821} sizes="(max-width: 680px) 50vw, 33vw" /><div className="cut-card-content"><span>{number}</span><h3>{name}</h3><p>{text}</p><ChevronRight /></div></article>)}</div>;
+  let cutNumber = 0;
+
+  return <div className="cut-catalogue">
+    <section className="carcass-formats" aria-labelledby="carcass-formats-title">
+      <div><p className="section-label">Whole-carcass capability</p><h3 id="carcass-formats-title">Every stage of the breakdown</h3></div>
+      <ul>{carcassFormats.map((format) => <li key={format}>{format}</li>)}</ul>
+    </section>
+
+    {cutGroups.map((group) => <section className="cut-group" id={`cuts-${group.id}`} key={group.id}>
+      <Image className="cut-group-image" src={group.image} alt={group.imageAlt} width={1600} height={900} sizes="(max-width: 680px) 100vw, 1200px" />
+      <div className="cut-group-heading"><div><p className="section-label">{group.eyebrow}</p><h3>{group.title}</h3></div><p>{group.text}</p></div>
+      <div className="cut-grid">{group.cuts.map(([name, text]) => {
+        cutNumber += 1;
+        const number = String(cutNumber).padStart(2, '0');
+        return <article className="cut-card" key={`${group.id}-${name}`}><span>{number}</span><h3>{name}</h3><p>{text}</p><ChevronRight /></article>;
+      })}</div>
+    </section>)}
+
+    <section className="supply-formats" aria-labelledby="supply-formats-title">
+      <div><p className="section-label">Prepared for your operation</p><h3 id="supply-formats-title">Specify the product. We shape the programme.</h3></div>
+      <ul>{supplyFormats.map((format) => <li key={format}>{format}</li>)}</ul>
+    </section>
+  </div>;
 }
