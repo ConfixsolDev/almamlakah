@@ -1,5 +1,6 @@
 import { ArrowRight, ClipboardCheck, ThermometerSnowflake } from 'lucide-react';
 import { CutGrid, InnerPage, ProcessSteps } from '../inner-page';
+import { whatsappUrl } from '../contact';
 
 export default function ProcessPage() {
   return <InnerPage eyebrow="Precision processing" title={<>Cut with intent.<br />Ship with confidence.</>} intro="Expertly prepared beef and mutton, precisely deboned, portioned, chilled, and quality-checked to meet the exact specifications of restaurant and food-service partners across the GCC." image="/journey-processing.png">
@@ -7,6 +8,6 @@ export default function ProcessPage() {
     <ProcessSteps />
     <section className="spec-band"><div><ThermometerSnowflake /><h3>Cooling is part of the cut</h3><p>Controlled cooling, hygienic handling, and disciplined handover preserve texture and freshness from deboning through export.</p></div><div><ClipboardCheck /><h3>Specification is the SOP</h3><p>Each order can be defined by cut, trim, weight range, pack format, label, lot, and destination documentation.</p></div></section>
     <section className="cuts-section"><p className="section-label">The complete cut catalogue</p><h2>Whole carcass.<br />Kitchen-ready precision.</h2><p className="section-lede">A comprehensive range of premium beef, mutton, lamb, offal, and processing formats—prepared around the exact requirements of GCC chefs, retailers, importers, and food-service teams.</p><CutGrid /></section>
-    <section className="detail-callout"><div><p className="section-label">For chefs, buyers & importers</p><h2>Tell us your cut sheet.</h2><p>Share your menu, target weights, carton plan, and destination. We will shape a cutting and shipment SOP around it.</p></div><a className="gold-button" href="/#contact">Discuss a specification <ArrowRight /></a></section>
+    <section className="detail-callout"><div><p className="section-label">For chefs, buyers & importers</p><h2>Tell us your cut sheet.</h2><p>Share your menu, target weights, carton plan, and destination. We will shape a cutting and shipment SOP around it.</p></div><a className="gold-button" href={whatsappUrl} target="_blank" rel="noreferrer">Discuss a specification <ArrowRight /></a></section>
   </InnerPage>;
 }

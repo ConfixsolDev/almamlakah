@@ -1,6 +1,7 @@
 import { ArrowRight, CheckCircle2, ChevronRight, Snowflake, ShieldCheck, Ship } from 'lucide-react';
 import type { ReactNode } from 'react';
 import Image from 'next/image';
+import { whatsappUrl } from './contact';
 
 type PageProps = {
   eyebrow: string;
@@ -18,14 +19,14 @@ export function InnerPage({ eyebrow, title, intro, image, children }: PageProps)
         <nav aria-label="Primary navigation">
           <a href="/story">Our Story</a><a href="/breeds">Breeds</a><a href="/process">Process</a><a href="/products">Products</a><a href="/export-journey">Export Journey</a><a href="/quality">Quality</a>
         </nav>
-        <a className="gold-button" href="/#contact">Partner with us <ArrowRight /></a>
+        <a className="gold-button" href={whatsappUrl} target="_blank" rel="noreferrer">Partner with us <ArrowRight /></a>
       </header>
       <section className="inner-hero">
         <Image className="inner-hero-media" src={image} alt="" fill priority sizes="100vw" />
         <div className="shell inner-hero-copy"><p className="section-label">{eyebrow}</p><h1>{title}</h1><p>{intro}</p></div>
       </section>
       <div className="shell inner-content">{children}</div>
-      <section className="inner-cta"><div className="shell"><p className="section-label">Built around your market</p><h2>Premium cuts. Reliable supply.<br />Made for your business.</h2><p className="inner-cta-copy">Tell us the cuts, volumes, packaging, and delivery requirements you need. We align responsible sourcing, halal processing, quality control, and cold-chain delivery from Pakistan to the GCC.</p><a className="gold-button" href="/#contact">Plan your meat programme <ArrowRight /></a></div></section>
+      <section className="inner-cta"><div className="shell"><p className="section-label">Built around your market</p><h2>Premium cuts. Reliable supply.<br />Made for your business.</h2><p className="inner-cta-copy">Tell us the cuts, volumes, packaging, and delivery requirements you need. We align responsible sourcing, halal processing, quality control, and cold-chain delivery from Pakistan to the GCC.</p><a className="gold-button" href={whatsappUrl} target="_blank" rel="noreferrer">Plan your meat programme <ArrowRight /></a></div></section>
       <footer className="inner-footer"><div className="shell"><span>© {new Date().getFullYear()} Al-Mamlakah W.L.L.</span><a href="https://faujimeat.com" target="_blank" rel="noreferrer">Fauji Meat <ArrowRight /></a><span>Pakistan · GCC markets</span></div></footer>
     </main>
   );

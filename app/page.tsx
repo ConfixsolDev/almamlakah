@@ -16,6 +16,7 @@ import {
 import type { LucideIcon } from 'lucide-react';
 import Image from 'next/image';
 import { JourneyGallery } from './journey-gallery';
+import { whatsappNumber, whatsappUrl } from './contact';
 
 const navItems = [
   ['Our Story', '/story'],
@@ -128,7 +129,7 @@ export default function Home() {
           <nav className="desktop-nav" aria-label="Primary navigation">
             {navItems.map(([label, href]) => <a key={href} href={href}>{label}</a>)}
           </nav>
-          <a className="gold-button header-button" href="#contact">Partner with us <ArrowRight /></a>
+          <a className="gold-button header-button" href={whatsappUrl} target="_blank" rel="noreferrer">Partner with us <ArrowRight /></a>
         </header>
         <nav className="mobile-nav shell" aria-label="Mobile navigation">
           {navItems.slice(0, 5).map(([label, href]) => <a key={href} href={href}>{label}</a>)}
@@ -141,7 +142,7 @@ export default function Home() {
           <p className="hero-subtitle">Halal integrity from origin to table</p>
           <div className="hero-actions">
             <a className="gold-button" href="#journey">Explore the journey <ArrowRight /></a>
-            <a className="outline-button" href="#contact">Request partnership</a>
+            <a className="outline-button" href={whatsappUrl} target="_blank" rel="noreferrer">Request partnership</a>
           </div>
         </div>
 
@@ -176,7 +177,7 @@ export default function Home() {
             <p className="section-label">Our premium range</p>
             <h2>Pakistani origin.<br />Crafted for Gulf kitchens.</h2>
             <p>Premium halal meat selected for consistency, flavour, tenderness, and the demands of GCC hospitality and retail partners.</p>
-            <a className="outline-rect" href="#contact">Discuss your requirements <ArrowRight /></a>
+            <a className="outline-rect" href={whatsappUrl} target="_blank" rel="noreferrer">Discuss your requirements <ArrowRight /></a>
           </div>
           <div className="product-grid">
             {products.map((product) => (
@@ -236,7 +237,7 @@ export default function Home() {
           <p className="section-label">Partnerships built for growth</p>
           <h2>Premium Pakistani meat.<br />Built for Gulf business.</h2>
           <p>Tell us about your market, product specifications, volumes, and delivery needs. We&apos;ll shape the right Pakistan-to-GCC supply conversation.</p>
-          <a className="gold-button" href="mailto:partnerships@example.com">Start a partnership <ArrowRight /></a>
+          <a className="gold-button" href={whatsappUrl} target="_blank" rel="noreferrer" aria-label={`Contact Al-Mamlakah on WhatsApp at ${whatsappNumber}`}>WhatsApp {whatsappNumber} <ArrowRight /></a>
         </div>
       </section>
 
