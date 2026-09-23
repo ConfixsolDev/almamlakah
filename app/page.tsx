@@ -119,9 +119,6 @@ export default function Home() {
         <div className="hero-origin-media" aria-hidden="true">
           <Image className="hero-media" src="/hero-cattle-origin.png" alt="" fill priority sizes="100vw" />
         </div>
-        <div className="hero-beef-media" aria-hidden="true">
-          <Image src="/real-beef-bone-in.jpg" alt="" fill priority sizes="(max-width: 680px) 100vw, 34vw" />
-        </div>
         <header className="site-header shell">
           <BrandLockup />
           <nav className="desktop-nav" aria-label="Primary navigation">
