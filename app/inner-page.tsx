@@ -8,10 +8,11 @@ type PageProps = {
   title: ReactNode;
   intro: string;
   image: string;
+  imagePosition?: string;
   children: ReactNode;
 };
 
-export function InnerPage({ eyebrow, title, intro, image, children }: PageProps) {
+export function InnerPage({ eyebrow, title, intro, image, imagePosition, children }: PageProps) {
   return (
     <main className="inner-page">
       <header className="inner-header shell">
@@ -22,7 +23,7 @@ export function InnerPage({ eyebrow, title, intro, image, children }: PageProps)
         <a className="gold-button" href={whatsappUrl} target="_blank" rel="noreferrer">Partner with us <ArrowRight /></a>
       </header>
       <section className="inner-hero">
-        <Image className="inner-hero-media" src={image} alt="" fill priority sizes="100vw" />
+        <Image className="inner-hero-media" src={image} alt="" fill priority sizes="100vw" style={imagePosition ? { objectPosition: imagePosition } : undefined} />
         <div className="shell inner-hero-copy"><p className="section-label">{eyebrow}</p><h1>{title}</h1><p>{intro}</p></div>
       </section>
       <div className="shell inner-content">{children}</div>
