@@ -116,9 +116,10 @@ export default function Home() {
   return (
     <main>
       <section className="hero" id="home">
-        <div className="hero-origin-media" aria-hidden="true">
-          <Image className="hero-media" src="/hero-cattle-origin.png" alt="" fill priority sizes="100vw" />
-        </div>
+        <picture className="hero-origin-media" aria-hidden="true">
+          <source media="(max-width: 680px)" srcSet="/hero-origin-split-premium-mobile-v3.webp" />
+          <Image className="hero-media" src="/hero-origin-split-premium-v3.webp" alt="" fill priority sizes="100vw" />
+        </picture>
         <header className="site-header shell">
           <BrandLockup />
           <nav className="desktop-nav" aria-label="Primary navigation">
